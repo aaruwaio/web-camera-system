@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+  <title>web-camera-system</title>
+  <style type="text/css">
+  </style>
+</head>
+
+<body>
+
+  <div id="display-my-id">
+    <span>受信側ID: </span>
+    <span id="my-id"></span>
+  </div>
+  <div id="input-id-form">
+    <span>送信側IDを入力: </span>
+    <input type=”text” id="their-id"></input>
+    <button id="make-call">発信</button>
+  </div>
+
+  <!-- 映像の比率は32:9 -->
+  <div id="received-video">
+    <p>受信した映像</p>
+    <video id="their-video" width="640" height="180" autoplay muted playsinline></video>
+  </div>
+
+  <script type="text/javascript" src="client.js"></script>
+</body>
+</html>

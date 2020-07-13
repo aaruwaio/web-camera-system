@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+  <title>web-camera-system</title>
+</head>
+<body>
+
+  <div id="display-my-id">
+    <span>送信側ID: </span>
+    <span id="my-id"></span>
+  </div>
+
+  <!-- 元の映像の比率は16:9 -->
+  <div id="original-video">
+    <p>元の映像</p>
+    <video id="v1" width="320" height="180" autoplay muted playsinline loop>
+      <source src="/video/test1.mp4" width="320" height="180">
+    </video>
+
+    <video id="v2" width="320" height="180" autoplay muted playsinline loop>
+      <source src="/video/test2.mp4" width="320" height="180">
+    </video>
+  </div>
+
+  <!-- 加工後の映像の比率は32:9 -->
+  <div id="manufactured-video">
+    <p>加工された映像</p>
+    <canvas id="c" width="640" height="180"></canvas>
+  </div>
+  　
+  <script type="text/javascript" src="server.js"></script>
+</body>
+</html>
